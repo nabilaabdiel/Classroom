@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "1044374806085",
+    "project_id": "kelasindustri-crocodic",
+    "storage_bucket": "kelasindustri-crocodic.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044374806085:android:5707c4e82d3662d7d7cd2c",
+        "android_client_info": {
+          "package_name": "com.abdiel.classroom"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044374806085-q63u9cu3s05gv20olf2l1al7irts6134.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsqzU7zZY1On6liA7zKNXoqJZTZOqMXpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044374806085-q63u9cu3s05gv20olf2l1al7irts6134.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044374806085:android:25798dd81eed172ed7cd2c",
+        "android_client_info": {
+          "package_name": "com.abdiel.friends"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044374806085-q63u9cu3s05gv20olf2l1al7irts6134.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsqzU7zZY1On6liA7zKNXoqJZTZOqMXpk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044374806085-q63u9cu3s05gv20olf2l1al7irts6134.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

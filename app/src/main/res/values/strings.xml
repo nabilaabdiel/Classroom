@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">Classroom</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="hi">Hi!</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="school">School</string>
+    <string name="name">Name</string>
+    <string name="biodata">Biodata</string>
+    <string name="friend_list">Friend List</string>
+    <string name="blank_data">Blank Data</string>
+    <string name="enter_your_phone_number">Enter your phone number ...</string>
+    <string name="password">Password</string>
+    <string name="enter_your_password">Enter your password ...</string>
+    <string name="log_in">Log in</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="register">Register</string>
+    <string name="profile">Profile</string>
+    <string name="Name">Name</string>
+    <string name="edit_password">Edit Password</string>
+    <string name="log_out">Log out</string>
+    <string name="enter_your_name">Enter your name ...</string>
+    <string name="my_class_app">My Class-App</string>
+    <string name="information_architecture">Information architecture</string>
+    <string name="enter">Enter?</string>
+    <string name="choose_school">Choose School</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="confirm_your_password">Confirm your password ...</string>
+    <string name="have_an_account">Have an account?</string>
+    <string name="old_password">Old Password</string>
+    <string name="enter_your_old_password">Enter your old password ...</string>
+    <string name="new_password">New Password</string>
+    <string name="enter_your_new_password">Enter your new password ...</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="are_you_sure_you_want_to_log_out">Are you sure you want to log out?</string>
+
+    <string name="label_must_fill">Required</string>
+    <string name="change_photo">Change Photo</string>
+    <string name="password_sensor">**********</string>
+
+    <string-array name="school">
+        <item>SMK Hidayah</item>
+        <item>SMKN 11 Semarang</item>
+        <item>SMKN 3 Kendal</item>
+        <item>SMKN 1 Jatiroto</item>
+    </string-array>
+</resources>
