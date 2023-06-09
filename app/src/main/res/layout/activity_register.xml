@@ -85,6 +85,7 @@
             android:layout_marginStart="28dp"
             android:layout_marginEnd="28dp"
             android:textColorHint="#9C9C9C"
+            android:layout_marginTop="6dp"
             app:hintEnabled="false"
             android:background="@color/transparent">
 

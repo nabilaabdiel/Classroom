@@ -1,5 +1,6 @@
 package com.abdiel.classroom.api
 
+import okhttp3.MultipartBody
 import retrofit2.http.*
 
 interface ApiService {
@@ -8,7 +9,7 @@ interface ApiService {
     @FormUrlEncoded
     @POST("api/auth/login")
     suspend fun login(
-//        @Header("device_token") device_token: String?,
+        @Field("device_token") device_token: String?,
         @Field("phone") phone: String?,
         @Field("password") password: String?
     ): String
@@ -34,20 +35,26 @@ interface ApiService {
 
     //Change Password
     @FormUrlEncoded
-    @POST("auth/change-password")
+    @POST("api/auth/editpassword")
     suspend fun changePassword(
         @Field("old_password") old_password : String,
-        @Field("new_password") new_password : String,
-        @Field("password_confirmation") password_confirmation : String
+        @Field("new_password") new_password : String
     ) : String
 
     //Profile Update
     @FormUrlEncoded
-    @POST("user/profile")
-    suspend fun userUpdate(
+    @POST("api/auth/editprofile")
+    suspend fun editProfile(
         @Field("name") name: String,
-        @Field("school_id") school_id : Int,
-        @Field("phone") phone : String,
+        @Field("school_id") school_id: Int,
+    ) : String
+
+    @Multipart
+    @POST("api/auth/editprofile")
+    suspend fun editProfileImg(
+        @Part("name") name: String,
+        @Part("school_id") school_id: Int,
+        @Part photo : MultipartBody.Part?
     ) : String
 
     //Get Friend List
@@ -55,13 +62,17 @@ interface ApiService {
     suspend fun getFriend(
     ) : String
 
-    //Detail Friend
-    @GET("friends/2282bdc1")
-    suspend fun detailFriend(
-    ) : String
-
     //Get School
     @GET("api/auth/getschools")
     suspend fun getSchool(
+    ) : String
+
+    //sendNotification
+    @FormUrlEncoded
+    @POST("api/auth/sendNotification")
+    suspend fun sendNotification(
+        @Field("title") title: String?,
+        @Field("body") body: String?,
+        @Field("user_id") userId: Int?
     ) : String
 }

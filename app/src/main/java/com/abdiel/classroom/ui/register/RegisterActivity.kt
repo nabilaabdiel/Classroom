@@ -15,10 +15,7 @@ import com.abdiel.classroom.data.school.School
 import com.abdiel.classroom.databinding.ActivityRegisterBinding
 import com.abdiel.classroom.ui.home.HomeActivity
 import com.crocodic.core.api.ApiStatus
-import com.crocodic.core.extension.isEmptyRequired
-import com.crocodic.core.extension.openActivity
-import com.crocodic.core.extension.textOf
-import com.crocodic.core.extension.tos
+import com.crocodic.core.extension.*
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -48,15 +45,16 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding, RegisterViewModel
             val confirmPassword = binding.etConfirmPassword.textOf()
 
             if (password.length < 8) {
-                binding.etPassword.requestFocus()
-                binding.etPassword.error = "Password minimum 8 characters"
+                binding.root.snacked("Password minimum 8 characters")
+//                binding.etPassword.error = "Password minimum 8 characters"
 
                 return@setOnClickListener
             }
 
-            if (password.length > 15) {
-                binding.etPassword.requestFocus()
-                binding.etPassword.error = "Password maximum 15 characters"
+            if (password.length > 20) {
+                binding.root.snacked("Password maximum 20 characters")
+//                binding.etPassword.requestFocus()
+//                binding.etPassword.error = "Password maximum 15 characters"
 
                 return@setOnClickListener
             }
@@ -75,8 +73,6 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding, RegisterViewModel
             }
         }
 
-
-
         binding.btnLogin.setOnClickListener{
             finish()
         }
@@ -91,7 +87,6 @@ class RegisterActivity : BaseActivity<ActivityRegisterBinding, RegisterViewModel
                             ApiStatus.LOADING -> loadingDialog.show("Logging in...")
                             ApiStatus.SUCCESS -> {
                                 loadingDialog.dismiss()
-//                                openActivity<HomeActivity>()
                                 finish()
                             }
                             else -> loadingDialog.setResponse(it.message ?: return@collect)

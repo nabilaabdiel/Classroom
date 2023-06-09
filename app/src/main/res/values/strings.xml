@@ -38,6 +38,8 @@
     <string name="change_photo">Change Photo</string>
     <string name="password_sensor">**********</string>
 
+    <string name="msg_token_fmt" formatted="true"> %s Token Confirmed</string>
+
     <string-array name="school">
         <item>SMK Hidayah</item>
         <item>SMKN 11 Semarang</item>

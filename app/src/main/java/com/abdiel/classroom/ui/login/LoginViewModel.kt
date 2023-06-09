@@ -24,12 +24,11 @@ class LoginViewModel @Inject constructor(
     private val gson: Gson
 ): BaseViewModel() {
 
-    //"device_token" add di dlm apiService.login klo ada headers nya
-
     fun login(phoneNumber: String, password: String) = viewModelScope.launch {
         _apiResponse.emit(ApiResponse().responseLoading())
+        val deviceToken = session.getString(Const.TOKEN.DEVICE_TOKEN)
         ApiObserver(
-            { apiService.login( phoneNumber, password) }, false, object : ApiObserver.ResponseListener {
+            { apiService.login( deviceToken, phoneNumber, password) }, false, object : ApiObserver.ResponseListener {
                 override suspend fun onSuccess(response: JSONObject) {
                     val data = response.getJSONObject(ApiCode.DATA).toObject<User>(gson)
                     session.saveUser(data)
@@ -40,10 +39,6 @@ class LoginViewModel @Inject constructor(
                     session.setValue(Const.TOKEN.PREF_TOKEN, response.getString("token"))
 
                     _apiResponse.emit(ApiResponse().responseSuccess("Logging in"))
-                }
-
-                override suspend fun onError(response: ApiResponse) {
-                    super.onError(response)
                 }
             })
     }

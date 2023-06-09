@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="data"
+            type="com.abdiel.classroom.data.user.User" />
+    </data>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
@@ -49,13 +54,15 @@
             android:orientation="vertical"
             app:layout_constraintTop_toBottomOf="@id/parent_edit_profile">
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/circle_profile"
+            <ImageView
+                android:id="@+id/cv_profile"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                imageUrl='@{data.photo}'
+                userName='@{data.name}'
+                android:background="@drawable/ic_person_black"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="42dp"
-                android:background="@drawable/ic_person_black"/>
+                android:layout_marginTop="38dp"/>
 
             <TextView
                 android:id="@+id/btn_edit_profile"
@@ -90,6 +97,7 @@
                 android:background="@drawable/btn_custom"
                 android:fontFamily="@font/inter_regular"
                 android:padding="14dp"
+                android:text='@{data.name}'
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:drawableEnd="@drawable/ic_edit"
@@ -116,15 +124,19 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginStart="28dp"
                 android:layout_marginEnd="28dp"
+                android:layout_marginTop="6dp"
+                app:hintEnabled="false"
                 android:background="@color/transparent">
 
                 <AutoCompleteTextView
+                    android:id="@+id/et_school"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.4"
                     android:background="@drawable/btn_custom"
                     android:fontFamily="@font/inter_regular"
                     android:hint="@string/choose_school"
+                    android:text='@{data.schoolName}'
                     android:inputType="none"
                     android:textSize="14sp" />
 
@@ -133,7 +145,7 @@
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_register"
+            android:id="@+id/btn_save"
             android:layout_width="match_parent"
             android:layout_height="53dp"
             android:layout_marginStart="28dp"

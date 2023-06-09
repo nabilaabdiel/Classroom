@@ -47,13 +47,16 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_title" />
 
-            <TextView
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/btn_login"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="38dp"
                 android:fontFamily="@font/inter_bold"
                 android:text="@string/enter"
+                android:textSize="16sp"
+                android:textAllCaps="false"
+                android:background="@drawable/btn_custom"
                 android:textColor="@color/text"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

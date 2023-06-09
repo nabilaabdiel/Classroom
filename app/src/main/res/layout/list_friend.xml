@@ -18,14 +18,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/iv_friend"
                 android:layout_width="56dp"
                 android:layout_height="56dp"
+                android:background="@drawable/ic_person_black"
                 android:layout_alignParentStart="true"
                 android:layout_centerVertical="true"
                 android:layout_marginStart="28dp"
-                android:src="@drawable/ic_person_black" />
+                imageUrl='@{data.photo}'
+                userName='@{data.name}'/>
 
             <TextView
                 android:id="@+id/tv_list_item"
@@ -55,7 +57,7 @@
                 android:maxLines="1"
                 android:minLines="1"
                 android:paddingHorizontal="25dp"
-                android:text='@{data.schoolId}'
+                android:text='@{data.schoolName}'
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 tools:text="Contoh Sekolah" />

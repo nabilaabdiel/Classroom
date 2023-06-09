@@ -38,11 +38,13 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
+            <ImageView
                 android:id="@+id/photo_profile"
-                android:layout_width="58dp"
-                android:layout_height="58dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
                 android:layout_marginEnd="28dp"
+                imageUrl='@{user.photo}'
+                userName='@{user.name}'
                 android:background="@drawable/ic_person_white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -73,8 +75,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:reverseLayout="true"
-                    app:stackFromEnd="true"
+                    app:reverseLayout="false"
+                    app:stackFromEnd="false"
                     tools:itemCount="10"
                     tools:listitem="@layout/list_friend" />
 

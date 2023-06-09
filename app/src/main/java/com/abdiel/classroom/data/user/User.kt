@@ -20,5 +20,7 @@ data class User(
     @SerializedName("photo")
     val photo: String?,
     @SerializedName("updated_at")
-    val updatedAt: String?
+    val updatedAt: String?,
+    @SerializedName("school_name")
+    val schoolName: String?
 ) : Parcelable

@@ -10,6 +10,7 @@ object Const {
 
     object TOKEN {
         const val PREF_TOKEN = "pref_token"
+        const val DEVICE_TOKEN = "token"
     }
 
     object LIST {

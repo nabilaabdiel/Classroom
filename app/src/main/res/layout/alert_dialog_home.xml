@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/alert_dialog"
+    android:id="@+id/alert_dialog_home"
     android:layout_width="match_parent"
+    android:layout_marginStart="38dp"
+    android:layout_marginEnd="38dp"
     android:background="@color/transparent"
     android:layout_height="match_parent">
 
@@ -23,7 +25,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/inter_regular"
-                android:text="@string/are_you_sure_you_want_to_log_out"
+                android:text="Are you sure you want to exit the app?"
                 android:textColor="@color/black"
                 android:layout_marginTop="18dp"/>
 
@@ -39,27 +41,27 @@
                 app:layout_constraintTop_toBottomOf="@id/parent_biodata">
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_cancel"
+                    android:id="@+id/btn_stay"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_custom_cancel"
                     android:fontFamily="@font/inter_medium"
-                    android:text="@string/cancel"
+                    android:text="Stay here"
                     android:textAllCaps="false"
                     android:layout_marginBottom="8dp"
                     android:textColor="@color/text" />
 
                 <androidx.appcompat.widget.AppCompatButton
-                    android:id="@+id/btn_logout"
+                    android:id="@+id/btn_exit"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
                     android:layout_weight="1"
                     android:background="@drawable/btn_custom_logout"
                     android:fontFamily="@font/inter_medium"
-                    android:text="@string/log_out"
+                    android:text="Exit"
                     android:textAllCaps="false"
                     android:layout_marginBottom="8dp"
                     android:textColor="@color/white" />

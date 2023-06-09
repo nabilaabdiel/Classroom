@@ -17,7 +17,5 @@ class SplashViewModel @Inject constructor(private val session: Session): BaseVie
         val userLogin = session.getString(Const.USER.PROFILE)
 
         done (userLogin == "Login")
-
-
     }
 }
