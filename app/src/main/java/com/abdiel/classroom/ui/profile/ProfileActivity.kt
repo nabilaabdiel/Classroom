@@ -38,7 +38,7 @@ class ProfileActivity :
             if (success) {
                 getUser()
             } else {
-                binding.root.snacked("Gagal ambil data profile")
+                binding.root.snacked(R.string.failed_data_profile)
             }
         }
 
@@ -78,12 +78,6 @@ class ProfileActivity :
                         }
                     }
                 }
-//                //id-> string school name
-//                launch {
-//                    viewModel.schools.collect {
-//                        binding.school = it.schoolName
-//                    }
-//                }
             }
         }
     }

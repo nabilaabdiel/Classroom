@@ -8,7 +8,6 @@ import com.abdiel.classroom.base.activity.BaseActivity
 import com.abdiel.classroom.data.constant.Const
 import com.abdiel.classroom.data.user.User
 import com.abdiel.classroom.databinding.ActivityDetailBinding
-import com.crocodic.core.extension.tos
 import com.crocodic.core.helper.ImagePreviewHelper
 import dagger.hilt.android.AndroidEntryPoint
 

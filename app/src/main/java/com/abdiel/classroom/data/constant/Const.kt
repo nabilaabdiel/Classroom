@@ -20,4 +20,8 @@ object Const {
     object FRIENDS {
         const val FRIENDS = "friends"
     }
+
+    object TIMEOUT {
+        const val NINETY_LONG = 90L
+    }
 }

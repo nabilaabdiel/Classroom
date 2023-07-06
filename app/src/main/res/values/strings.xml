@@ -37,6 +37,7 @@
     <string name="label_must_fill">Required</string>
     <string name="change_photo">Change Photo</string>
     <string name="password_sensor">**********</string>
+    <string name="failed_data_profile">Failed to fetch profile data</string>
 
     <string name="msg_token_fmt" formatted="true"> %s Token Confirmed</string>
 
